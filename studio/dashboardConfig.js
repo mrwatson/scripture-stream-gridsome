@@ -25,7 +25,7 @@ export default {
                 },
                 {
                   buildHookId: '5e5e6c9b8dc54e687314f24f',
-                  title: 'Blog Website',
+                  title: 'Scripture Stream',
                   name: 'scripture-stream-gridsome',
                   apiId: '7bfbc0f6-54c1-4dc7-a427-3f5fc46502d8'
                 }
@@ -46,7 +46,7 @@ export default {
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      options: {title: 'Recent posts', order: '_createdAt desc', types: ['post']},
       layout: {width: 'medium'}
     }
   ]

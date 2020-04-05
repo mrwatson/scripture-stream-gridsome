@@ -14,8 +14,7 @@
     <p class="author__intro">{{$static.settings.description}}</p>
 
     <p class="author__links">
-      <a href="//twitter.com/sanity_io">Follow on Twitter</a>
-      <a href="//github.com/sanity-io/sanity-template-gridsome-blog">GitHub</a>
+      <a href="//twitter.com/benchleysermons">Follow on Twitter</a>
     </p>
   </div>
 </template>

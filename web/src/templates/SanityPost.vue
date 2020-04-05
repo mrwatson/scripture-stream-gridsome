@@ -15,6 +15,8 @@
         />
       </div>
 
+      <div>Presented by <strong>{{ $page.post.speakers[0].speaker.name }}</strong></div>
+
       <block-content
         class="post__content"
         :blocks="$page.post._rawBody"
@@ -71,10 +73,15 @@ query Post ($id: ID!) {
   }
   post: sanityPost (id: $id) {
     title
-    publishedAt (format: "D. MMMM YYYY")
-    categories {
+    publishedAt (format: "MMMM D, YYYY")
+    series {
       id
       title
+    }
+    speakers {
+      speaker {
+        name
+      }
     }
     _rawExcerpt
     _rawBody

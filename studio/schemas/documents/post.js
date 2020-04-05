@@ -3,7 +3,7 @@ import {format} from 'date-fns'
 export default {
   name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Posts',
   fields: [
     {
       name: 'title',
@@ -50,17 +50,58 @@ export default {
       ]
     },
     {
-      name: 'categories',
+      name: 'speakers',
+      title: 'Speakers',
       type: 'array',
-      title: 'Categories',
+      of: [
+        {
+          type: 'speakerReference'
+        }
+      ]
+    },
+    {
+      name: 'format',
+      type: 'array',
+      title: 'Format',
       of: [
         {
           type: 'reference',
           to: {
-            type: 'category'
+            type: 'format'
           }
         }
       ]
+    },
+    {
+      name: 'series',
+      type: 'array',
+      title: 'Series',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'series'
+          }
+        }
+      ]
+    },
+    {
+      name: 'subSeries',
+      type: 'array',
+      title: 'Sub-series',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'subSeries'
+          }
+        }
+      ]
+    },
+    {
+      name: 'audio',
+      type: 'audio',
+      title: 'Audio'
     },
     {
       name: 'body',

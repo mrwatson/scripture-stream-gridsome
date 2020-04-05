@@ -31,12 +31,13 @@
         slug {
           current
         }
-        categories {
+        series {
           id
           title
         }
-        publishedAt(format: "D. MMMM YYYY")
+        publishedAt(format: "MMMM D, YYYY")
         _rawExcerpt
+        
         mainImage {
           asset {
             _id
@@ -74,7 +75,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Scripture Stream'
   }
 }
 </script>
