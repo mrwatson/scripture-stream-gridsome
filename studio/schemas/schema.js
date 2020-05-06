@@ -14,6 +14,7 @@ import subSeries from './documents/subSeries'
 import format from './documents/format'
 import speaker from './documents/speaker'
 import venue from './documents/venue'
+import topic from './documents/topic'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -26,6 +27,7 @@ import authorReference from './objects/authorReference'
 import speakerReference from './objects/speakerReference'
 import venueReference from './objects/venueReference'
 import audio from './objects/audio'
+import topicReference from './objects/topicReference'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -54,7 +56,9 @@ export default createSchema({
     format,
     speaker,
     venue,
-    audio
+    audio,
+    topic,
+    topicReference
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

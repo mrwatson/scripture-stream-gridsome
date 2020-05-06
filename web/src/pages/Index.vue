@@ -31,12 +31,49 @@
         slug {
           current
         }
+        topics {
+          id
+          title
+          slug {
+            current
+          }
+        }
         series {
           id
           title
         }
         publishedAt(format: "MMMM D, YYYY")
         _rawExcerpt
+        _rawBody
+        series {
+          id
+          title
+        }
+        speakers {
+          speaker {
+            name
+            image {
+              asset {
+              _id
+              url
+            }
+            caption
+            alt
+            hotspot {
+              x
+              y
+              height
+              width
+            }
+            crop {
+              top
+              bottom
+              left
+              right
+            }
+            }
+          }
+        }
         
         mainImage {
           asset {

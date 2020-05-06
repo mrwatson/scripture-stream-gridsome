@@ -104,6 +104,23 @@ export default {
       title: 'Audio'
     },
     {
+      name: 'topics',
+      type: 'array',
+      title: 'Topics',
+      description: 'Topic tags for this post.',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'topic'
+          }
+        }
+      ],
+      options: {
+        layout: 'tags'
+      }
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
@@ -145,15 +162,15 @@ export default {
       publishedAt: 'publishedAt',
       slug: 'slug',
       media: 'mainImage'
-    },
-    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
-      return {
-        title,
-        media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
-      }
-    }
+    }// ,
+    // prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+    //   const dateSegment = format(publishedAt, 'YYYY/MM')
+    //   const path = `/${dateSegment}/${slug.current}/`
+    //   return {
+    //     title,
+    //     media,
+    //     subtitle: publishedAt ? path : 'Missing publishing date'
+    //   }
+    // }
   }
 }

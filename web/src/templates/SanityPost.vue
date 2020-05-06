@@ -81,6 +81,26 @@ query Post ($id: ID!) {
     speakers {
       speaker {
         name
+        image {
+          asset {
+          _id
+          url
+        }
+        caption
+        alt
+        hotspot {
+          x
+          y
+          height
+          width
+        }
+        crop {
+          top
+          bottom
+          left
+          right
+        }
+        }
       }
     }
     _rawExcerpt
